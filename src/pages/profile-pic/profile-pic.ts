@@ -79,11 +79,13 @@ export class ProfilePicPage {
           buttons: [{
             text: 'Ok',
             handler: ()=> {
-              this.navCtrl.push('AdminDashPage')
+              this.navCtrl.push('TabsPage')
             }
           }]
         }).present()
 
+      }).catch(err=> {
+        alert(err.message)
       })
     })
 

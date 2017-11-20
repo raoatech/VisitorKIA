@@ -57,6 +57,9 @@ export class AdminRegPage {
         
         this.navCtrl.setRoot('ProfilePicPage')
 
+   }).catch((err)=>{
+     load.dismiss()
+     alert(err.message)
    })
 }
 

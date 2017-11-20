@@ -20,8 +20,13 @@ export class EditProfilePage {
       this.data = res
 
       this.imgSrc = this.data.imageURL
-    }).catch(err=> {
-      console.log(err)
+    }).catch((err:Error)=> {
+      
+      this.alert.create({
+        title: 'Error',
+        message: err.message
+      }).present
+      
     })
       
   }

@@ -26,7 +26,7 @@ export class LoginPage {
     this.adminPrv.getAdminDetails().then(res=> {
       this.data = res
     }).catch(err=> {
-      console.log(err)
+      alert(err.message)
     })
 
     this.image = this.navParams.get('data')

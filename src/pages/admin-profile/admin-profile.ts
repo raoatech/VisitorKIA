@@ -31,7 +31,7 @@ export class AdminProfilePage {
     this.adminPrv.getAdminDetails().then(res=> {
       this.data = res
     }).catch(err=> {
-      console.log(err)
+      alert(err.message)
     })
   }
   
