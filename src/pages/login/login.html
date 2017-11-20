@@ -7,16 +7,24 @@
 
     <ion-item>
       <h1>Welcome,</h1>
-      <p class="instr">Provide details to login</p>
+      <!-- <p class="instr">Provide details to login</p> -->
     </ion-item>
 
-    <ion-item>
+    <!-- <ion-item>
       <ion-label stacked>Phone number</ion-label>
       <ion-input type="number" [(ngModel)]="phone"></ion-input>
-    </ion-item>
+    </ion-item> -->
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left (click)="continue"><ion-icon name=""</button>
+      </ion-col>
+      <ion-col></ion-col>
+      <ion-col></ion-col>
+    </ion-row>
 
     <ion-item> 
-      <button ion-button color="primary" block (click)="checkVisitor(phone)">Login</button>
+      <button ion-button color="primary" block (click)="checkVisitor()">Login</button>
     </ion-item>
 
     <p class="visitor">Already a visitor? <b (click)="continue()">Continue</b></p>

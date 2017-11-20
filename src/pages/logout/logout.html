@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Log Out</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>
+        Phone number
+      </ion-label>
+      <ion-input [(ngModel)]="phone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button (click)="getPhone(phone)">Go to Dashboard</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
