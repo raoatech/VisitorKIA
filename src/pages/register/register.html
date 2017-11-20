@@ -1,0 +1,92 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Register</ion-title>
+    
+    <!-- <ion-buttons end>
+        <button ion-button icon-only><ion-icon name="camera"></ion-icon></button>
+    </ion-buttons> -->
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>
+          First name
+        </ion-label>
+        <ion-input [(ngModel)]="data.firstname"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked>
+            Last name
+          </ion-label>
+          <ion-input type="text" [(ngModel)]= "data.lastname"></ion-input>
+        </ion-item>`
+
+      <ion-item>
+        <ion-label stacked>
+          Email
+        </ion-label>
+        <ion-input type="email" [(ngModel)]="data.email"></ion-input>
+      </ion-item>
+
+    <ion-item>
+        <ion-label stacked>
+          Phone
+        </ion-label>
+        <ion-input type="number" [(ngModel)]="data.phone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>
+          Home address
+      </ion-label>
+      <ion-input text [(ngModel)]="data.address"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Gender</ion-label>
+      <ion-select [(ngModel)]="data.gender">
+        <ion-option value="Male">Male</ion-option>
+        <ion-option value="Female">Female</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>
+        Employee Name
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="data.employeeName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>
+        Employee phone 
+      </ion-label>
+      <ion-input type="number" [(ngModel)]="data.employeePhone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>
+        Access Code
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="data.access"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>
+          Reason for Visit
+        </ion-label>
+        <ion-textarea [(ngModel)]="data.reason"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button block (click)="createVisitor()" [disabled]="data.firstname == null || data.lastname == null || data.phone == null || data.email == null || data.address == null || data.gender == null || data.employeeName == null || data.employeePhone == null || data.reason == null || data.access == null">Register</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

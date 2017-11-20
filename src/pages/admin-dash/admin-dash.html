@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar no-border-top no-shadow color="primary" *ngIf="openSearchbar == false">
+    <ion-buttons end> 
+      <button ion-button icon-only (click)="openSearch()"><ion-icon name="search"></ion-icon></button>
+    </ion-buttons>
+    <ion-title>VisitorApp</ion-title>  
+  </ion-navbar>
+
+  <ion-navbar color="primary" *ngIf="openSearchbar == true">
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-buttons end>
+      <button ion-button small (click)="closeSearch()">Cancel</button>
+    </ion-buttons>
+</ion-navbar>
+ 
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let visitor of myVisitor" (click)="getVisitor(visitor)">
+      <ion-avatar item-start>
+        <img src={{imgSrc}}>
+      </ion-avatar>
+      <h3 text-wrap>{{visitor.firstname}} {{visitor.lastname}}</h3>
+      <p>{{visitor.gender}}</p>
+      <p item-end color="primary">{{visitor.date}}</p>
+    </ion-item>
+  </ion-list>
+ 
+</ion-content>
+
+<!-- <ion-footer>
+  <ion-toolbar>
+    <ion-col >
+      <button ion-button icon-left (click)="goToVisitor()">
+          <ion-icon name="arrow-back"></ion-icon>
+          Visitor Page       
+      </button>
+    </ion-col>
+
+    <ion-col>
+      <button ion-button icon-left color="danger" style="float: right" (click)="logout()">
+          <ion-icon name="power"></ion-icon>
+        Logout
+      </button>
+    </ion-col>
+  </ion-toolbar>
+</ion-footer> -->

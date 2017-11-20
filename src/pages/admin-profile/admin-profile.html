@@ -1,0 +1,46 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>VisitorApp</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="more($event)"><ion-icon name="more"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+        <div class="profile-image">
+          <img src="{{data.imageURL}}">
+        </div>
+        <div class="btn">
+          <button ion-button round (click)="editProfile()">Edit Profile</button>
+        </div>
+    </ion-card>
+
+    <ion-list >
+
+      <ion-list-header>
+          Company Details
+      </ion-list-header>
+
+      <ion-item text-wrap>
+        <ion-icon name="person" color="primary" item-start></ion-icon>
+        {{data.name}}
+      </ion-item>
+      <ion-item text-wrap>
+        <ion-icon name="home" item-start></ion-icon>
+        {{data.address}}
+      </ion-item>
+
+      <ion-item text-wrap>
+        <ion-icon name="mail" color="danger" item-start></ion-icon>
+        {{email}}
+      </ion-item>
+    </ion-list>
+
+</ion-content>

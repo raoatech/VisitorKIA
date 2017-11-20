@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Create Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+    <div class="profile-image">
+      <img src="{{imgSrc}}">
+    </div>
+
+    <div>
+      <button ion-button icon-right (click)="uploadImage()"><ion-icon name="file"></ion-icon>Upload image</button>
+    </div>
+  </ion-card>
+
+  <ion-list>
+    <ion-list-header>
+      Company Details
+    </ion-list-header>
+    <ion-item>
+      <ion-label stacked>
+        Company name 
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>
+       Company Address
+      </ion-label>
+      <ion-input type="text" [(ngModel)] ="address"></ion-input>
+    </ion-item>
+  
+
+      <ion-item>
+        <button ion-button block (click)="profile(name,address)">Register</button>
+      </ion-item>
+  </ion-list>
+
+</ion-content>

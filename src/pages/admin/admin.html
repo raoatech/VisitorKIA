@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Administration Portal</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>
+        Admin Email Address
+      </ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label stacked>
+          Admin Password
+        </ion-label>
+        <ion-input type="password"></ion-input>
+    </ion-item>
+
+   <ion-item>
+    <button ion-button block color="primary" (click)="login()">Get in</button>
+   </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <p style="text-align: center;">Create account as Admin <span style="color:dodgerblue" (click)="register()">here</span></p>
+</ion-footer>

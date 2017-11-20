@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Enter Phone</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Enter phone number</ion-label>
+      <ion-input type="number" [(ngModel)]="phone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button block (click)="check(phone)">Enter Phone number</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

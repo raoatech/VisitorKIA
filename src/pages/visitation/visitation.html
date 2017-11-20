@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Enter details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label stacked>
+          Employee Name
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="employeeName"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label stacked>
+          Employee phone 
+        </ion-label>
+        <ion-input type="number" [(ngModel)]="employeePhone"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label stacked>
+          Access Code
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="access"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+          <ion-label stacked>
+            Reason for Visit
+          </ion-label>
+          <ion-textarea [(ngModel)]="reason"></ion-textarea>
+      </ion-item>
+      
+      <ion-item>
+        <button ion-button block (click)="visit(employeeName, employeePhone, access, reason)" [disabled]="employeeName == null || employeePhone == null || access == null || reason == null">Visit Again</button>
+      </ion-item>
+</ion-content>

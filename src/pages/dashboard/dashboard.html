@@ -1,0 +1,58 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Dashboard</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only color="danger" (click)="logout()"><ion-icon name="log-out"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card>
+    <div>
+      <img src="assets/icon/visitor.png" />
+      <p><b>Visitor</b></p>
+    </div>
+  </ion-card>
+
+  <ion-card>
+    <ion-list>
+      <ion-item text-wrap>
+        <ion-icon item-start name="person" color="primary"></ion-icon>
+        {{data.firstname}} {{data.lastname}}
+      </ion-item>
+
+      <ion-item text-wrap>
+        <ion-icon item-start name="home"></ion-icon>
+        {{data.address}}
+      </ion-item>
+
+      <ion-item text-wrap>
+        <ion-icon item-start name="phone-portrait"></ion-icon>
+        {{data.phone}}
+      </ion-item>
+
+      <ion-item text-wrap>
+        <ion-icon item-start name="mail" color="danger"></ion-icon>   
+        {{data.email}}
+      </ion-item>
+
+      <ion-item text-wrap>
+        <ion-icon item-start name="female" color="primary"></ion-icon>   
+        {{data.gender}}
+      </ion-item>
+
+      
+    </ion-list>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <p style="font-size: 10px; float:right">Powered by Raoatech technologies</p>
+</ion-footer>

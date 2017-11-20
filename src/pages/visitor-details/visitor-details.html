@@ -1,0 +1,77 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{data.firstname}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card>
+      <div>
+        <img src="assets/img/profile.png">
+        <p>Visitor</p>
+
+        <ion-row>
+            <ion-col>Time in</ion-col>
+            <ion-col><ion-icon color="primary" name="swap" large></ion-icon></ion-col>
+            <ion-col text-wrap>{{data.date}} {{data.time}}</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>Time out</ion-col>
+            <ion-col><ion-icon color="danger" name="swap" large></ion-icon></ion-col>
+            <ion-col>{{data.dateout}} {{data.timeout}}</ion-col>
+        </ion-row>
+      </div>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Visitor Details
+    </ion-card-header>
+
+    <ion-list>
+      <ion-item text-wrap>
+        <ion-icon item-start name="person" color="primary"></ion-icon>
+        {{data.firstname}} {{data.lastname}}
+      </ion-item>
+      <ion-item text-wrap>
+        <ion-icon item-start name="mail" color="danger"></ion-icon>
+        {{data.email}}
+      </ion-item>
+      <ion-item>
+        <ion-icon item-start name="phone-portrait"></ion-icon>
+        {{data.phone}}
+      </ion-item>
+      <ion-item>
+          <ion-icon item-start name="home"></ion-icon>
+          {{data.address}}
+        </ion-item>
+      <ion-item text-wrap >
+        <ion-icon item-start name="shirt" color="primary"></ion-icon>
+        {{data.reason}}
+        </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header> 
+      Employee Details
+    </ion-card-header>
+
+    <ion-list>
+      <ion-item>
+        <ion-icon item-start name="person" color="primary"></ion-icon>
+        {{data.employeeName}}
+      </ion-item>
+      <ion-item>
+        <ion-icon item-start name="phone-portrait" ></ion-icon>
+         {{data.employeePhone}}
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+
+</ion-content>

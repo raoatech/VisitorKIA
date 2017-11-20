@@ -1,0 +1,41 @@
+<ion-content padding>
+
+  <ion-list no-lines>
+    <ion-item>
+      <img src="{{data.imageURL}}" /> 
+    </ion-item>
+
+    <ion-item>
+      <h1>Welcome,</h1>
+      <p class="instr">Provide details to login</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Phone number</ion-label>
+      <ion-input type="number" [(ngModel)]="phone"></ion-input>
+    </ion-item>
+
+    <ion-item> 
+      <button ion-button color="primary" block (click)="checkVisitor(phone)">Login</button>
+    </ion-item>
+
+    <p class="visitor">Already a visitor? <b (click)="continue()">Continue</b></p>
+    <p class="visitor">Sign up as a <b (click)="register()">Visitor</b></p>
+
+    <div class="btn">
+      <button ion-button icon-left outline (click)="admin()">
+        <ion-icon name="person"></ion-icon>
+        Go to Admin Page
+      </button>
+    </div>
+    
+  </ion-list>
+
+
+  
+  
+
+
+
+</ion-content>
+

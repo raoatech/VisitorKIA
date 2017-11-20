@@ -1,14 +1,38 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  
+  <div class="logo">
+      <img src="assets/icon/admin.png">
+  </div>  
+
+  <ion-list no-lines>
+    <ion-list-header>
+      <h2>Login as Administrator</h2>
+    </ion-list-header>
+    <ion-item>
+      <ion-input type="email" [(ngModel)]="email" placeholder="Email Address">   
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" [(ngModel)] = "password" placeholder="Password">     
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button full color="working" (click)="adminLogin(email, password)">Login</button>
+    </ion-item>
+
+    <p class="admin">Create Administrator account. <b (click)="signup()">Sign up</b></p>
+  </ion-list>
+
+
+
 </ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <p style="text-align:center; font-size: 10px">Powered by Raoatech Software solutions</p>
+  </ion-toolbar>
+</ion-footer>
