@@ -13,7 +13,7 @@
             font-size: 50px;
         }
 
-        img{
+        .profile-image{
             width: 150px;
             height: 150px;
         }
@@ -58,6 +58,35 @@
             justify-content: center;
             flex-direction: column;
             margin: auto
+        }
+
+        #disp{
+      
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            align-content: center;
+            margin: auto;
+        }
+
+        ion-grid{
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            
+        }
+
+        ion-row{
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            margin: auto;
+            padding: 5px;
+        }
+
+        .image{
+            margin: auto;
+            text-align: center
         }
 
         

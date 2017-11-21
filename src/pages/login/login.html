@@ -1,8 +1,7 @@
 <ion-content padding>
 
-  <ion-list no-lines>
     <ion-item>
-      <img src="{{data.imageURL}}" /> 
+      <img class="profile-image" src="{{data.imageURL}}" /> 
     </ion-item>
 
     <ion-item>
@@ -15,20 +14,37 @@
       <ion-input type="number" [(ngModel)]="phone"></ion-input>
     </ion-item> -->
 
-    <ion-row>
-      <ion-col>
-        <button ion-button icon-left (click)="continue"><ion-icon name=""</button>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 (click)="continue()">
+          <div class="image">
+            <img id="disp" src="assets/img/exist.png">
+          </div>
+        <p> Exisiting Visitor</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col  (click)="checkVisitor()">
+          <div class="image">
+            <img id="disp" src="assets/img/logout.png"><br>
+            <p text-wrap text-center>Sign Out Visitor</p>
+          </div>
+         
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+      <ion-col  (click)="register()">
+        <div class="image">
+          <img id="disp" src="assets/img/create.png">
+        </div>
+        <p text-wrap>New Visitor</p>
       </ion-col>
-      <ion-col></ion-col>
-      <ion-col></ion-col>
-    </ion-row>
+      </ion-row>
+    </ion-grid>
 
-    <ion-item> 
-      <button ion-button color="primary" block (click)="checkVisitor()">Login</button>
-    </ion-item>
-
-    <p class="visitor">Already a visitor? <b (click)="continue()">Continue</b></p>
-    <p class="visitor">Sign up as a <b (click)="register()">Visitor</b></p>
+  
 
     <div class="btn">
       <button ion-button icon-left outline (click)="admin()">
@@ -36,8 +52,7 @@
         Go to Admin Page
       </button>
     </div>
-    
-  </ion-list>
+
 
 
   

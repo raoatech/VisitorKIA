@@ -17,6 +17,8 @@ import { ImageHandlerProvider } from '../providers/image-handler/image-handler';
 import { AuthProvider } from '../providers/auth/auth';
 import { VisitorProvider } from '../providers/visitor/visitor';
 import { AdminProvider } from '../providers/admin/admin';
+import { NetworkProvider } from '../providers/network/network';
+import { Network } from '@ionic-native/network'
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { AdminProvider } from '../providers/admin/admin';
     AdminProvider,
     File,
     FileChooser,
-    FilePath
+    FilePath,
+    NetworkProvider,
+    Network
   ]
 })
 export class AppModule {}

@@ -18,7 +18,7 @@ export class VisitorProvider {
     let date = new Date();
 
     let dd :any = date.getDate();
-    let mm : any = date.getMonth();
+    let mm : any = date.getMonth() +1;
     let yyyy = date.getFullYear();
     let hr :any = date.getHours()
     let min: any = date.getMinutes();
@@ -123,7 +123,7 @@ export class VisitorProvider {
     let date = new Date();
     
         let dd :any = date.getDate();
-        let mm : any = date.getMonth();
+        let mm : any = date.getMonth() + 1;
         let yyyy = date.getFullYear();
         let hr :any = date.getHours()
         let min: any = date.getMinutes();
@@ -208,7 +208,7 @@ export class VisitorProvider {
     let date = new Date();
     
         let dd :any = date.getDate();
-        let mm : any = date.getMonth();
+        let mm : any = date.getMonth() + 1;
         let yyyy = date.getFullYear();
         let hr :any = date.getHours()
         let min: any = date.getMinutes();
